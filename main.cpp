@@ -20,5 +20,6 @@ struct Impl : public Interface
 
 int main()
 {
-    Impl impl;
+    Interface* ptrToImpl = new Impl;    
+    delete ptrToImpl;
 }
