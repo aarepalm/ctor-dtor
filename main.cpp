@@ -20,6 +20,10 @@ struct Impl : public Interface
 
 int main()
 {
-    Interface* ptrToImpl = new Impl;    
+    Interface* ptrToImpl = new Impl;
+    
+    Impl& impl = dynamic_cast<Impl&>(*ptrToImpl);
+    std::cout << impl.SomeGetter() << std::endl;
+    
     delete ptrToImpl;
 }
